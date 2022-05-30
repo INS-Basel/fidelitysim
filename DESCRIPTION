@@ -1,0 +1,13 @@
+Package: fidelitysim
+Title: Fidelity pattern simulations in implementation science  
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Diana", "Trutschel", , "diana@trutschel.de", role = c("aut"),
+            comment =c(ORCID = "")),
+    person("Catherine", "Blatter", , "catherine.blatter@unibas.ch", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-4069-7178")))
+Description: What the package does (one paragraph).
+License: CC BY 4.0
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
