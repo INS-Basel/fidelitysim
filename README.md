@@ -15,7 +15,7 @@ You can install {fidelitysim} from GitHub:
 
 ``` r
 # the {remotes}-package is needed to install from github: 
-# install.packages("remotes")
+install.packages("remotes")
 
 remotes::install_github("INS-Basel/fidelitysim")
 ```
@@ -23,4 +23,4 @@ remotes::install_github("INS-Basel/fidelitysim")
 ## Usage
 
 A guided tutorial on how to apply the simulation is given here
-<https://ins-basel.github.com/fidelity-tutorial>
+<https://ins-basel.github.io/fidelity-tutorial>

@@ -34,4 +34,4 @@ remotes::install_github("INS-Basel/fidelitysim")
 
 ## Usage
 
-A guided tutorial on how to apply the simulation is given here https://ins-basel.github.com/fidelity-tutorial
+A guided tutorial on how to apply the simulation is given here https://ins-basel.github.io/fidelity-tutorial

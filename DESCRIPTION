@@ -1,5 +1,5 @@
 Package: fidelitysim
-Title: Fidelity pattern simulations in implementation science  
+Title: Fidelity pattern simulations for implementation science research
 Version: 0.0.0.9000
 Authors@R: c(
     person("Diana", "Trutschel", , "diana@trutschel.de", role = c("aut"),
