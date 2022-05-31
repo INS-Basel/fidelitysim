@@ -11,7 +11,7 @@
 {fidelitysim} holds code to replicate the simulation of different
 fidelity patterns as reported in \[ - paper - \].
 
-## Installation d
+## Installation
 
 You can install {fidelitysim} from GitHub:
 
