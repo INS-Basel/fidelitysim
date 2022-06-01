@@ -1,18 +1,13 @@
-#' Title
-#'
-#' @param x
-#'
-#' @return
-#' @export
-#'
-as.numeric.factor <- function(x) {as.numeric(levels(x))[x]}
+
 
 #' Title
+#' Calculation of performance measure of estimation: Bias
+#' as the difference between the estimated and actual values
 #'
-#' @param vec
-#' @param theta
+#' @param vec Estimated value from simulation
+#' @param theta True value
 #'
-#' @return
+#' @return Bias of effect estimation
 #' @export
 #'
 bias<-function(vec, theta){
@@ -21,14 +16,20 @@ bias<-function(vec, theta){
 
 
 #' Title
+#' Calculation of several performance measure for the estimates obtained from the simulation repeats
 #'
-#' @param vecEst
-#' @param vecSe
-#' @param vec.p
-#' @param theta
-#' @param alpha
+#' @param vecEst vector of estimated effect values from simulation repeats
+#' @param vecSe vector of estimated standard error from simulation repeats
+#' @param vec.p vector of significance (probability of being sampled from null hypothesis) from simulation repeats
+#' @param theta true value for effect
+#' @param alpha Type I error rate = significance level for testing the null hypothesis
 #'
-#' @return
+#' @return Vector of Performance measures:
+#' 1. Average of the estimates of the parameter of interest
+#' 2. Empirical standard error as an assessment of the estimation uncertainty
+#' 3. Bias = mean deviation of the estimates from the true value of the parameter of interest is an indicator of accuracy
+#' 4. Coverage of a confidence interval is a measurement that can be used to control the Type I error
+#' 5. Empirical power = the proportion of simulation samples in which the H0 of no effect is rejected at a significance level when H0 is false
 #' @export
 #'
 performanceMeas<-function(vecEst, vecSe, vec.p, theta, alpha=0.05){
@@ -50,15 +51,17 @@ performanceMeas<-function(vecEst, vecSe, vec.p, theta, alpha=0.05){
 
 
 #' Title
+#' Simulate a loss of data points within a full study data obtained
+#' within I clusters and observed over K time points
 #'
-#' @param data.all
-#' @param I
-#' @param K
-#' @param B
-#' @param C
-#' @param D
+#' @param data.all given data of a study (can be simulated or obtained)
+#' @param I Number of clusters within the study
+#' @param K Number of time points within the study
+#' @param B Type of cluster loss: 0 = No cluster loss, 1 = Cluster missing at random, 2 = Cluster is missing at beginning, 3 = Cluster is missing at end of the study
+#' @param C Number of clusters which getting lost
+#' @param D Number of individual loss (chosen randomly from all individuals within the study)
 #'
-#' @return
+#' @return Matrix of data which is remained after data loss
 #' @export
 #'
 Data.loss.SWD<-function(data.all, I,K, B="0", C=0, D=0){
@@ -116,31 +119,43 @@ Data.loss.SWD<-function(data.all, I,K, B="0", C=0, D=0){
 
 
 #' Title
+#' Simulation for
+#' Repeats anzSim times the following steps
+#'   1. Determining the design matrix regarding the chosen design (Design, Number of cluster, time points, individuals)
+#'      knowing Fidelity pattern and possible data loss
+#'   2. Sample data of the given study design and expected data loss using the package "samplingDataCRT"
+#'   3. Estimation of Effects using linear mixed model estimation
+#' Calculation of performance measures from the effect estimation within the repeats of the simulation
 #'
-#' @param anzSim
-#' @param type
-#' @param sigma.1
-#' @param sigma.2
-#' @param sigma.3
-#' @param K
-#' @param J
-#' @param I
-#' @param mu.0
-#' @param theta
-#' @param betas
-#' @param X
-#' @param X.A
-#' @param B.cond
-#' @param C.cond
-#' @param D.cond
+#' @param anzSim Number of simulation repeats
+#' @param type Study design type = "cross-sec" for cross-sectional or  "long" for longitudinal
+#' @param sigma.1 Within variability or error variance (Hughes&Hussey sigma)
+#' @param sigma.2  Between individual variance (only used when the individuals are followed over time: longitudinal study)
+#' @param sigma.3 Between clusters variability (Hughes&Hussey tau)
+#' @param K Number of time points (measurement)
+#' @param I Number of cluster
+#' @param J Number of Individuals (=individuals per cluster)
+#' @param mu.0 Baseline mean within the model specification
+#' @param theta Intervention effect
+#' @param betas Time trend could be included
+#' @param X Design matrix for building linear model of given ooptimal study
+#' @param X.A Design matrix for building linear model of sampling real data given real setting
+#' @param B.cond Condition for type of cluster loss: 0 = No cluster loss, 1 = Cluster missing at random, 2 = Cluster is missing at beginning, 3 = Cluster is missing at end of the study
+#' @param C.cond Condition for number of clusters which getting lost
+#' @param D.cond Condition for Number of individual loss (chosen randomly from all individuals within the study)
 #'
-#' @return
+#' @return Vector of Performance measures (see function performanceMeas):
+#' 1. Average of the estimates of the parameter of interest
+#' 2. Empirical standard error as an assessment of the estimation uncertainty
+#' 3. Bias = mean deviation of the estimates from the true value of the parameter of interest is an indicator of accuracy
+#' 4. Coverage of a confidence interval is a measurement that can be used to control the Type I error
+#' 5. Empirical power = the proportion of simulation samples in which the H0 of no effect is rejected at a significance level when H0 is false
 #' @export
 #'
 simulation<-function(anzSim,type, sigma.1,sigma.2=NULL,sigma.3,K,J,I,mu.0,theta,betas,
                         X, X.A, B.cond="0",C.cond=0, D.cond=0){
 
-  # DEsingmatrix Daten laut Studeinedesign
+  # Desingmatrix Daten laut Studeinedesign
   D<-samplingDataCRT::completeDataDesignMatrix(J, X)
   # Desingmatrix Daten f?r reale Daten
   if(!is.null(X.A)){A<-samplingDataCRT::completeDataDesignMatrix(J, X.A)
@@ -214,13 +229,17 @@ simulation<-function(anzSim,type, sigma.1,sigma.2=NULL,sigma.3,K,J,I,mu.0,theta,
 
 
 #' Title
+#' Given a design of a hypothetical cluster parallel randomized study and their pattern of fidelity over time
+#' conduct the function the corresponding design matrix
+#' which can be used for linear regression modeling
 #'
-#' @param nC
-#' @param nT
-#' @param nSw
-#' @param pattern
+#' @param nC Number of cluster
+#' @param nT Number of time points
+#' @param nSw Number of cluster with control condition 0 (nC-nSw is then the number of cluster with treatment condition 1)
+#' @param pattern Fidelity pattern (deviation from 1)  for each time point
 #'
-#' @return
+#' @return Design matrix of size nT x nC for a parrallel cluster randomized trial with
+#' values of 0 for control condition and values between 0 and 1 for degree of implementation of treatment (fidelity)
 #' @export
 #'
 implemMatrix.parallel<-function (nC, nT, nSw, pattern){
@@ -236,14 +255,18 @@ implemMatrix.parallel<-function (nC, nT, nSw, pattern){
 
 
 #' Title
+#' Given a design of a hypothetical cluster randomized stepped wedge study and their pattern of fidelity over time
+#' conduct the function the corresponding design matrix
+#' which can be used for linear regression modeling
 #'
-#' @param nC
-#' @param nT
-#' @param nSw
-#' @param swP
-#' @param pattern
+#' @param nC Number of cluster
+#' @param nT Number of time points
+#' @param swP Number of timepoints the for clusters be at control
+#' @param nSw Number of cluster with switches from control condition 0 to treatment condition 1 at each time point
+#' @param pattern Fidelity pattern (deviation from 1)  for each time point
 #'
-#' @return
+#' @return Design matrix of size nT x nC for a cross-over cluster randomized trial with
+#' values of 0 for control condition and values between 0 and 1 for degree of implementation of treatment (fidelity)' @return
 #' @export
 #
 implemMatrix.crossover<-function (nC, nT, nSw,swP=NULL, pattern){

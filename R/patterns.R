@@ -1,14 +1,14 @@
 #' Title
-#' @description Calculates between a given start point and and end point the points in between for a given total number of points
+#' @description Calculates between a given start point and and end point
+#' the points in between for a given total number of points
 #'
-#' @param x.B
-#' @param x.E
-#' @param time.points
+#' @param x.B starting point (begin)
+#' @param x.E end point
+#' @param time.points number of points on total
 #'
-#' @return
+#' @return all exact points
 #' @export
 #'
-#' @examples
 calc.X.values<-function(x.B, x.E, time.points){
 
   i<-0:(time.points-1)
@@ -21,18 +21,18 @@ calc.X.values<-function(x.B, x.E, time.points){
 
 #' Title
 #'
-#' @description Ccalculates for given start Fidelity and end Fidelity the within
-#' Fidelity for a given number of timepoints using a logarithmus function,
-#' where with the par.slope Stretching and compression of the function can be
-#' influenced par.slope has to be greater than 0, near zero then the values are
+#' @description Calculates for given start Fidelity and end Fidelity the within
+#' Fidelity for a given number of time points using a logarithmic function to approximate Fidelity in between,
+#' where with the par.slope stretching and compression of the function can be
+#' influenced. par.slope has to be greater than 0, near zero then the values are
 #' almost constant, the greater then the values are going against the linear line.
 #'
-#' @param time.points
-#' @param Fid.End
-#' @param Fid.T1
-#' @param par.slope
+#' @param time.points number of time points
+#' @param Fid.End Fidelity at the end (final time point)
+#' @param Fid.T1 Fidelity at the begin (starting time point)
+#' @param par.slope Slope for the logarithmic function has to be greater 0, the greater towards 1 the more linear is the function
 #'
-#' @return
+#' @return a matrix: first column with time points, second column corresponding Fidelity for the time points
 #' @export
 #'
 find.Fidelity.log<-function(time.points, Fid.End, Fid.T1, par.slope=1){
@@ -69,13 +69,13 @@ find.Fidelity.log<-function(time.points, Fid.End, Fid.T1, par.slope=1){
 #' Title
 #'
 #' @description calculates for given start Fidelity and end Fidelity the within
-#' Fidelity for a given number of timepoints using a linear function
+#' Fidelity for a given number of time points using a linear function
 #'
-#' @param time.points
-#' @param Fid.End
-#' @param Fid.T1
+#' @param time.points number of time points
+#' @param Fid.End Fidelity at the end (final time point)
+#' @param Fid.T1 Fidelity at the begin (starting time point)
 #'
-#' @return
+#' @return a matrix: first column with time points, second column corresponding Fidelity for the time points
 #' @export
 #'
 find.Fidelity.linear<-function(time.points, Fid.End, Fid.T1){
@@ -90,12 +90,21 @@ find.Fidelity.linear<-function(time.points, Fid.End, Fid.T1){
   return(res)
 }
 
-#calculates for given start Fidelity and end Fidelity the within Fidelity
-#for a given number of timepoints
-#using an exponential function,
-#where with the par.slope Stretching and compression of the function can be influenced
-#wherby here the exponential function is derived as the reflection of the logarithm function on the straight line
-#par.slope has to be greater than 0, near zero then the values are almost constant, the greater then the values are going against the linear line
+#' Title
+#' #' @description Calculates for given start Fidelity and end Fidelity the within Fidelity
+#' for a given number of time points using an exponential function,
+#' where with the par.slope stretching and compression of the function can be influenced.
+#' Here the exponential function is derived as the reflection of the logarithm function on the straight line
+#' par.slope has to be greater than 0, near zero then the values are almost constant, the greater then the values are going against the linear line
+#'
+#' @param time.points number of time points
+#' @param Fid.End Fidelity at the end (final time point)
+#' @param Fid.T1 Fidelity at the begin (starting time point)
+#' @param par.slope Slope for the logarithmic function has to be greater 0, the greater towards 1 the more linear is the function
+#'
+#' @return a matrix: first column with time points, second column corresponding Fidelity for the time points
+#' @export
+#'
 find.Fidelity.exp<-function(time.points, Fid.End, Fid.T1, par.slope=1){
 
   #Berechnung Logarithmusfunktion
