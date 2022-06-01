@@ -2,16 +2,31 @@
 % Please edit documentation in R/functions.R
 \name{implemMatrix.crossover}
 \alias{implemMatrix.crossover}
-\title{Title}
+\title{Title
+Given a design of a hypothetical cluster randomized stepped wedge study and their pattern of fidelity over time
+conduct the function the corresponding design matrix
+which can be used for linear regression modeling}
 \usage{
 implemMatrix.crossover(nC, nT, nSw, swP = NULL, pattern)
 }
 \arguments{
-\item{pattern}{}
+\item{nC}{Number of cluster}
+
+\item{nT}{Number of time points}
+
+\item{nSw}{Number of cluster with switches from control condition 0 to treatment condition 1 at each time point}
+
+\item{swP}{Number of timepoints the for clusters be at control}
+
+\item{pattern}{Fidelity pattern (deviation from 1)  for each time point}
 }
 \value{
-
+Design matrix of size nT x nC for a cross-over cluster randomized trial with
+values of 0 for control condition and values between 0 and 1 for degree of implementation of treatment (fidelity)' @return
 }
 \description{
 Title
+Given a design of a hypothetical cluster randomized stepped wedge study and their pattern of fidelity over time
+conduct the function the corresponding design matrix
+which can be used for linear regression modeling
 }

@@ -2,7 +2,16 @@
 % Please edit documentation in R/functions.R
 \name{simulation}
 \alias{simulation}
-\title{Title}
+\title{Title
+Simulation for
+Repeats anzSim times the following steps
+\enumerate{
+\item Determining the design matrix regarding the chosen design (Design, Number of cluster, time points, individuals)
+knowing Fidelity pattern and possible data loss
+\item Sample data of the given study design and expected data loss using the package "samplingDataCRT"
+\item Estimation of Effects using linear mixed model estimation
+Calculation of performance measures from the effect estimation within the repeats of the simulation
+}}
 \usage{
 simulation(
   anzSim,
@@ -24,11 +33,57 @@ simulation(
 )
 }
 \arguments{
-\item{D.cond}{}
+\item{anzSim}{Number of simulation repeats}
+
+\item{type}{Study design type = "cross-sec" for cross-sectional or  "long" for longitudinal}
+
+\item{sigma.1}{Within variability or error variance (Hughes&Hussey sigma)}
+
+\item{sigma.2}{Between individual variance (only used when the individuals are followed over time: longitudinal study)}
+
+\item{sigma.3}{Between clusters variability (Hughes&Hussey tau)}
+
+\item{K}{Number of time points (measurement)}
+
+\item{J}{Number of Individuals (=individuals per cluster)}
+
+\item{I}{Number of cluster}
+
+\item{mu.0}{Baseline mean within the model specification}
+
+\item{theta}{Intervention effect}
+
+\item{betas}{Time trend could be included}
+
+\item{X}{Design matrix for building linear model of given ooptimal study}
+
+\item{X.A}{Design matrix for building linear model of sampling real data given real setting}
+
+\item{B.cond}{Condition for type of cluster loss: 0 = No cluster loss, 1 = Cluster missing at random, 2 = Cluster is missing at beginning, 3 = Cluster is missing at end of the study}
+
+\item{C.cond}{Condition for number of clusters which getting lost}
+
+\item{D.cond}{Condition for Number of individual loss (chosen randomly from all individuals within the study)}
 }
 \value{
-
+Vector of Performance measures (see function performanceMeas):
+\enumerate{
+\item Average of the estimates of the parameter of interest
+\item Empirical standard error as an assessment of the estimation uncertainty
+\item Bias = mean deviation of the estimates from the true value of the parameter of interest is an indicator of accuracy
+\item Coverage of a confidence interval is a measurement that can be used to control the Type I error
+\item Empirical power = the proportion of simulation samples in which the H0 of no effect is rejected at a significance level when H0 is false
+}
 }
 \description{
 Title
+Simulation for
+Repeats anzSim times the following steps
+\enumerate{
+\item Determining the design matrix regarding the chosen design (Design, Number of cluster, time points, individuals)
+knowing Fidelity pattern and possible data loss
+\item Sample data of the given study design and expected data loss using the package "samplingDataCRT"
+\item Estimation of Effects using linear mixed model estimation
+Calculation of performance measures from the effect estimation within the repeats of the simulation
+}
 }

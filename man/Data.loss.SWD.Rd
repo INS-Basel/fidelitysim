@@ -2,16 +2,30 @@
 % Please edit documentation in R/functions.R
 \name{Data.loss.SWD}
 \alias{Data.loss.SWD}
-\title{Title}
+\title{Title
+Simulate a loss of data points within a full study data obtained
+within I clusters and observed over K time points}
 \usage{
 Data.loss.SWD(data.all, I, K, B = "0", C = 0, D = 0)
 }
 \arguments{
-\item{D}{}
+\item{data.all}{given data of a study (can be simulated or obtained)}
+
+\item{I}{Number of clusters within the study}
+
+\item{K}{Number of time points within the study}
+
+\item{B}{Type of cluster loss: 0 = No cluster loss, 1 = Cluster missing at random, 2 = Cluster is missing at beginning, 3 = Cluster is missing at end of the study}
+
+\item{C}{Number of clusters which getting lost}
+
+\item{D}{Number of individual loss (chosen randomly from all individuals within the study)}
 }
 \value{
-
+Matrix of data which is remained after data loss
 }
 \description{
 Title
+Simulate a loss of data points within a full study data obtained
+within I clusters and observed over K time points
 }

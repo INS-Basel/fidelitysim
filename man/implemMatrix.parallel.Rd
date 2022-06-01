@@ -2,16 +2,29 @@
 % Please edit documentation in R/functions.R
 \name{implemMatrix.parallel}
 \alias{implemMatrix.parallel}
-\title{Title}
+\title{Title
+Given a design of a hypothetical cluster parallel randomized study and their pattern of fidelity over time
+conduct the function the corresponding design matrix
+which can be used for linear regression modeling}
 \usage{
 implemMatrix.parallel(nC, nT, nSw, pattern)
 }
 \arguments{
-\item{pattern}{}
+\item{nC}{Number of cluster}
+
+\item{nT}{Number of time points}
+
+\item{nSw}{Number of cluster with control condition 0 (nC-nSw is then the number of cluster with treatment condition 1)}
+
+\item{pattern}{Fidelity pattern (deviation from 1)  for each time point}
 }
 \value{
-
+Design matrix of size nT x nC for a parrallel cluster randomized trial with
+values of 0 for control condition and values between 0 and 1 for degree of implementation of treatment (fidelity)
 }
 \description{
 Title
+Given a design of a hypothetical cluster parallel randomized study and their pattern of fidelity over time
+conduct the function the corresponding design matrix
+which can be used for linear regression modeling
 }

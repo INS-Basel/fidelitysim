@@ -7,15 +7,21 @@
 find.Fidelity.log(time.points, Fid.End, Fid.T1, par.slope = 1)
 }
 \arguments{
-\item{par.slope}{}
+\item{time.points}{number of time points}
+
+\item{Fid.End}{Fidelity at the end (final time point)}
+
+\item{Fid.T1}{Fidelity at the begin (starting time point)}
+
+\item{par.slope}{Slope for the logarithmic function has to be greater 0, the greater towards 1 the more linear is the function}
 }
 \value{
-
+a matrix: first column with time points, second column corresponding Fidelity for the time points
 }
 \description{
-Ccalculates for given start Fidelity and end Fidelity the within
-Fidelity for a given number of timepoints using a logarithmus function,
-where with the par.slope Stretching and compression of the function can be
-influenced par.slope has to be greater than 0, near zero then the values are
+Calculates for given start Fidelity and end Fidelity the within
+Fidelity for a given number of time points using a logarithmic function to approximate Fidelity in between,
+where with the par.slope stretching and compression of the function can be
+influenced. par.slope has to be greater than 0, near zero then the values are
 almost constant, the greater then the values are going against the linear line.
 }

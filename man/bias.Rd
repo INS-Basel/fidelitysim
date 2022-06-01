@@ -2,16 +2,22 @@
 % Please edit documentation in R/functions.R
 \name{bias}
 \alias{bias}
-\title{Title}
+\title{Title
+Calculation of performance measure of estimation: Bias
+as the difference between the estimated and actual values}
 \usage{
 bias(vec, theta)
 }
 \arguments{
-\item{theta}{}
+\item{vec}{Estimated value from simulation}
+
+\item{theta}{True value}
 }
 \value{
-
+Bias of effect estimation
 }
 \description{
 Title
+Calculation of performance measure of estimation: Bias
+as the difference between the estimated and actual values
 }

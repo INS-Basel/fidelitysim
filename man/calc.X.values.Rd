@@ -7,11 +7,16 @@
 calc.X.values(x.B, x.E, time.points)
 }
 \arguments{
-\item{time.points}{}
+\item{x.B}{starting point (begin)}
+
+\item{x.E}{end point}
+
+\item{time.points}{number of points on total}
 }
 \value{
-
+all exact points
 }
 \description{
-Calculates between a given start point and and end point the points in between for a given total number of points
+Calculates between a given start point and and end point
+the points in between for a given total number of points
 }

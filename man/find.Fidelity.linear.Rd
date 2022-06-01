@@ -7,12 +7,16 @@
 find.Fidelity.linear(time.points, Fid.End, Fid.T1)
 }
 \arguments{
-\item{Fid.T1}{}
+\item{time.points}{number of time points}
+
+\item{Fid.End}{Fidelity at the end (final time point)}
+
+\item{Fid.T1}{Fidelity at the begin (starting time point)}
 }
 \value{
-
+a matrix: first column with time points, second column corresponding Fidelity for the time points
 }
 \description{
 calculates for given start Fidelity and end Fidelity the within
-Fidelity for a given number of timepoints using a linear function
+Fidelity for a given number of time points using a linear function
 }

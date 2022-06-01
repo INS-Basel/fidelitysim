@@ -2,16 +2,33 @@
 % Please edit documentation in R/functions.R
 \name{performanceMeas}
 \alias{performanceMeas}
-\title{Title}
+\title{Title
+Calculation of several performance measure for the estimates obtained from the simulation repeats}
 \usage{
 performanceMeas(vecEst, vecSe, vec.p, theta, alpha = 0.05)
 }
 \arguments{
-\item{alpha}{}
+\item{vecEst}{vector of estimated effect values from simulation repeats}
+
+\item{vecSe}{vector of estimated standard error from simulation repeats}
+
+\item{vec.p}{vector of significance (probability of being sampled from null hypothesis) from simulation repeats}
+
+\item{theta}{true value for effect}
+
+\item{alpha}{Type I error rate = significance level for testing the null hypothesis}
 }
 \value{
-
+Vector of Performance measures:
+\enumerate{
+\item Average of the estimates of the parameter of interest
+\item Empirical standard error as an assessment of the estimation uncertainty
+\item Bias = mean deviation of the estimates from the true value of the parameter of interest is an indicator of accuracy
+\item Coverage of a confidence interval is a measurement that can be used to control the Type I error
+\item Empirical power = the proportion of simulation samples in which the H0 of no effect is rejected at a significance level when H0 is false
+}
 }
 \description{
 Title
+Calculation of several performance measure for the estimates obtained from the simulation repeats
 }
