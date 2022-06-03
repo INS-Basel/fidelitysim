@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{simulation}
 \alias{simulation}
-\title{Performance measures from effect estimation within all
+\title{Get performance measures from effect estimation within all
 repeats of the simulation}
 \usage{
 simulation(
@@ -58,7 +58,7 @@ simulation(
 \item{D.cond}{Condition for Number of individual loss (chosen randomly from all individuals within the study)}
 }
 \value{
-Vector of Performance measures (see function performanceMeas):
+Vector of Estimates summaru=ies and performance measures (see function \code{performanceMeas}):
 \enumerate{
 \item Average of the estimates of the parameter of interest
 \item Empirical standard error as an assessment of the estimation uncertainty
@@ -76,4 +76,12 @@ knowing Fidelity pattern and possible data loss
 \item Sample data of the given study design and expected data loss using the package "samplingDataCRT"
 \item Estimation of Effects using linear mixed model estimation
 }
+}
+\seealso{
+Reference for linear model formulation of stepped wedge cluster randomized trials
+by Hussey and Hughes "Design and analysis of stepped wedge cluster randomized trials",
+Contemporary Clinical Trials, 2007 \url{https://www.sciencedirect.com/science/article/pii/S1551714406000632}
+as well as performance measurements for simulation studies
+by Burton et al. “The design of simulation studies in medical statistics”,
+Stat Med, 2006 \url{https://pubmed.ncbi.nlm.nih.gov/16947139/}
 }

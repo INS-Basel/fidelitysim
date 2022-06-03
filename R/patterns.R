@@ -1,4 +1,4 @@
-#' ???? - Please fill in title
+#' Approximate within points
 #'
 #' @description Calculation of all points in between a given start point and
 #' end point for a given total number of points

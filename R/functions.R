@@ -15,7 +15,7 @@ bias<-function(vec, theta){
 
 
 
-#' ??? - Please fill in a title
+#' Get several performance measures of (effect estimation) simulation studies
 #'
 #' @description Calculation of several performance measure for the estimates
 #' obtained from the simulation repeats
@@ -52,7 +52,7 @@ performanceMeas<-function(vecEst, vecSe, vec.p, theta, alpha=0.05){
 }
 
 
-#' Data loss simulation
+#' Data loss simulation for given study data
 #'
 #' @description Simulate a loss of data points within a full study data obtained
 #' within I clusters and observed over K time points
@@ -121,7 +121,7 @@ Data.loss.SWD<-function(data.all, I,K, B="0", C=0, D=0){
 }
 
 
-#' Performance measures from effect estimation within all
+#' Get performance measures from effect estimation within all
 #' repeats of the simulation
 #'
 #' @description Simulation for ??????
@@ -148,7 +148,14 @@ Data.loss.SWD<-function(data.all, I,K, B="0", C=0, D=0){
 #' @param C.cond Condition for number of clusters which getting lost
 #' @param D.cond Condition for Number of individual loss (chosen randomly from all individuals within the study)
 #'
-#' @return Vector of Performance measures (see function performanceMeas):
+#' @seealso  Reference for linear model formulation of stepped wedge cluster randomized trials
+#' by Hussey and Hughes "Design and analysis of stepped wedge cluster randomized trials",
+#' Contemporary Clinical Trials, 2007 \url{https://www.sciencedirect.com/science/article/pii/S1551714406000632}
+#' as well as performance measurements for simulation studies
+#' by Burton et al. “The design of simulation studies in medical statistics”,
+#' Stat Med, 2006 \url{https://pubmed.ncbi.nlm.nih.gov/16947139/}
+#'
+#' @return Vector of Estimates summaru=ies and performance measures (see function \code{performanceMeas}):
 #' 1. Average of the estimates of the parameter of interest
 #' 2. Empirical standard error as an assessment of the estimation uncertainty
 #' 3. Bias = mean deviation of the estimates from the true value of the parameter of interest is an indicator of accuracy

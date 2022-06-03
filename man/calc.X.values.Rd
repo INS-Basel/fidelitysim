@@ -2,7 +2,7 @@
 % Please edit documentation in R/patterns.R
 \name{calc.X.values}
 \alias{calc.X.values}
-\title{???? - Please fill in title}
+\title{Approximate within points}
 \usage{
 calc.X.values(x.B, x.E, time.points)
 }
