@@ -2,9 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{Data.loss.SWD}
 \alias{Data.loss.SWD}
-\title{Title
-Simulate a loss of data points within a full study data obtained
-within I clusters and observed over K time points}
+\title{Data loss simulation}
 \usage{
 Data.loss.SWD(data.all, I, K, B = "0", C = 0, D = 0)
 }
@@ -25,7 +23,6 @@ Data.loss.SWD(data.all, I, K, B = "0", C = 0, D = 0)
 Matrix of data which is remained after data loss
 }
 \description{
-Title
 Simulate a loss of data points within a full study data obtained
 within I clusters and observed over K time points
 }

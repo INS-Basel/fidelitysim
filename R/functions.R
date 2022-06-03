@@ -1,7 +1,6 @@
-
-
-#' Title
-#' Calculation of performance measure of estimation: Bias
+#' Get bias estimate
+#'
+#' @description Calculation of performance measure of estimation: Bias
 #' as the difference between the estimated and actual values
 #'
 #' @param vec Estimated value from simulation
@@ -15,8 +14,11 @@ bias<-function(vec, theta){
 }
 
 
-#' Title
-#' Calculation of several performance measure for the estimates obtained from the simulation repeats
+
+#' ??? - Please fill in a title
+#'
+#' @description Calculation of several performance measure for the estimates
+#' obtained from the simulation repeats
 #'
 #' @param vecEst vector of estimated effect values from simulation repeats
 #' @param vecSe vector of estimated standard error from simulation repeats
@@ -50,8 +52,9 @@ performanceMeas<-function(vecEst, vecSe, vec.p, theta, alpha=0.05){
 }
 
 
-#' Title
-#' Simulate a loss of data points within a full study data obtained
+#' Data loss simulation
+#'
+#' @description Simulate a loss of data points within a full study data obtained
 #' within I clusters and observed over K time points
 #'
 #' @param data.all given data of a study (can be simulated or obtained)
@@ -118,14 +121,15 @@ Data.loss.SWD<-function(data.all, I,K, B="0", C=0, D=0){
 }
 
 
-#' Title
-#' Simulation for
+#' Performance measures from effect estimation within all
+#' repeats of the simulation
+#'
+#' @description Simulation for ??????
 #' Repeats anzSim times the following steps
 #'   1. Determining the design matrix regarding the chosen design (Design, Number of cluster, time points, individuals)
 #'      knowing Fidelity pattern and possible data loss
 #'   2. Sample data of the given study design and expected data loss using the package "samplingDataCRT"
 #'   3. Estimation of Effects using linear mixed model estimation
-#' Calculation of performance measures from the effect estimation within the repeats of the simulation
 #'
 #' @param anzSim Number of simulation repeats
 #' @param type Study design type = "cross-sec" for cross-sectional or  "long" for longitudinal
@@ -150,8 +154,8 @@ Data.loss.SWD<-function(data.all, I,K, B="0", C=0, D=0){
 #' 3. Bias = mean deviation of the estimates from the true value of the parameter of interest is an indicator of accuracy
 #' 4. Coverage of a confidence interval is a measurement that can be used to control the Type I error
 #' 5. Empirical power = the proportion of simulation samples in which the H0 of no effect is rejected at a significance level when H0 is false
-#' @export
 #'
+#' @export
 simulation<-function(anzSim,type, sigma.1,sigma.2=NULL,sigma.3,K,J,I,mu.0,theta,betas,
                         X, X.A, B.cond="0",C.cond=0, D.cond=0){
 
@@ -228,8 +232,10 @@ simulation<-function(anzSim,type, sigma.1,sigma.2=NULL,sigma.3,K,J,I,mu.0,theta,
 }
 
 
-#' Title
-#' Given a design of a hypothetical cluster parallel randomized study and their pattern of fidelity over time
+#' Implementation of parallel matrix
+#'
+#' @description Given a design of a hypothetical cluster parallel randomized study
+#' and their pattern of fidelity over time
 #' conduct the function the corresponding design matrix
 #' which can be used for linear regression modeling
 #'
@@ -254,8 +260,9 @@ implemMatrix.parallel<-function (nC, nT, nSw, pattern){
 
 
 
-#' Title
-#' Given a design of a hypothetical cluster randomized stepped wedge study and their pattern of fidelity over time
+#' Implementation of crossover matrix
+#'
+#' @description Given a design of a hypothetical cluster randomized stepped wedge study and their pattern of fidelity over time
 #' conduct the function the corresponding design matrix
 #' which can be used for linear regression modeling
 #'

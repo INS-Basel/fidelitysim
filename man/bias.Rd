@@ -2,9 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{bias}
 \alias{bias}
-\title{Title
-Calculation of performance measure of estimation: Bias
-as the difference between the estimated and actual values}
+\title{Get bias estimate}
 \usage{
 bias(vec, theta)
 }
@@ -17,7 +15,6 @@ bias(vec, theta)
 Bias of effect estimation
 }
 \description{
-Title
 Calculation of performance measure of estimation: Bias
 as the difference between the estimated and actual values
 }

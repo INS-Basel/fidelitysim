@@ -2,7 +2,7 @@
 % Please edit documentation in R/patterns.R
 \name{calc.X.values}
 \alias{calc.X.values}
-\title{Title}
+\title{???? - Please fill in title}
 \usage{
 calc.X.values(x.B, x.E, time.points)
 }
@@ -17,6 +17,6 @@ calc.X.values(x.B, x.E, time.points)
 all exact points
 }
 \description{
-Calculates between a given start point and and end point
-the points in between for a given total number of points
+Calculation of all points in between a given start point and
+end point for a given total number of points
 }

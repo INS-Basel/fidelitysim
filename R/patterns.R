@@ -1,6 +1,7 @@
-#' Title
-#' @description Calculates between a given start point and and end point
-#' the points in between for a given total number of points
+#' ???? - Please fill in title
+#'
+#' @description Calculation of all points in between a given start point and
+#' end point for a given total number of points
 #'
 #' @param x.B starting point (begin)
 #' @param x.E end point
@@ -19,7 +20,7 @@ calc.X.values<-function(x.B, x.E, time.points){
 
 
 
-#' Title
+#' Find approximate fidelity with a logarithmic function
 #'
 #' @description Calculates for given start Fidelity and end Fidelity the within
 #' Fidelity for a given number of time points using a logarithmic function to approximate Fidelity in between,
@@ -66,7 +67,7 @@ find.Fidelity.log<-function(time.points, Fid.End, Fid.T1, par.slope=1){
 
 
 
-#' Title
+#' Find approximate fidelity with a linear function
 #'
 #' @description calculates for given start Fidelity and end Fidelity the within
 #' Fidelity for a given number of time points using a linear function
@@ -90,8 +91,9 @@ find.Fidelity.linear<-function(time.points, Fid.End, Fid.T1){
   return(res)
 }
 
-#' Title
-#' #' @description Calculates for given start Fidelity and end Fidelity the within Fidelity
+#' Find approximate fidelity with an exponential function
+#'
+#' @description Calculates for given start Fidelity and end Fidelity the within Fidelity
 #' for a given number of time points using an exponential function,
 #' where with the par.slope stretching and compression of the function can be influenced.
 #' Here the exponential function is derived as the reflection of the logarithm function on the straight line

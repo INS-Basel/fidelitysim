@@ -2,16 +2,8 @@
 % Please edit documentation in R/functions.R
 \name{simulation}
 \alias{simulation}
-\title{Title
-Simulation for
-Repeats anzSim times the following steps
-\enumerate{
-\item Determining the design matrix regarding the chosen design (Design, Number of cluster, time points, individuals)
-knowing Fidelity pattern and possible data loss
-\item Sample data of the given study design and expected data loss using the package "samplingDataCRT"
-\item Estimation of Effects using linear mixed model estimation
-Calculation of performance measures from the effect estimation within the repeats of the simulation
-}}
+\title{Performance measures from effect estimation within all
+repeats of the simulation}
 \usage{
 simulation(
   anzSim,
@@ -76,14 +68,12 @@ Vector of Performance measures (see function performanceMeas):
 }
 }
 \description{
-Title
-Simulation for
+Simulation for ??????
 Repeats anzSim times the following steps
 \enumerate{
 \item Determining the design matrix regarding the chosen design (Design, Number of cluster, time points, individuals)
 knowing Fidelity pattern and possible data loss
 \item Sample data of the given study design and expected data loss using the package "samplingDataCRT"
 \item Estimation of Effects using linear mixed model estimation
-Calculation of performance measures from the effect estimation within the repeats of the simulation
 }
 }

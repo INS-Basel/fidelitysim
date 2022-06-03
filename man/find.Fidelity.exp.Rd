@@ -2,12 +2,7 @@
 % Please edit documentation in R/patterns.R
 \name{find.Fidelity.exp}
 \alias{find.Fidelity.exp}
-\title{Title
-#' @description Calculates for given start Fidelity and end Fidelity the within Fidelity
-for a given number of time points using an exponential function,
-where with the par.slope stretching and compression of the function can be influenced.
-Here the exponential function is derived as the reflection of the logarithm function on the straight line
-par.slope has to be greater than 0, near zero then the values are almost constant, the greater then the values are going against the linear line}
+\title{Find approximate fidelity with an exponential function}
 \usage{
 find.Fidelity.exp(time.points, Fid.End, Fid.T1, par.slope = 1)
 }
@@ -24,8 +19,7 @@ find.Fidelity.exp(time.points, Fid.End, Fid.T1, par.slope = 1)
 a matrix: first column with time points, second column corresponding Fidelity for the time points
 }
 \description{
-Title
-#' @description Calculates for given start Fidelity and end Fidelity the within Fidelity
+Calculates for given start Fidelity and end Fidelity the within Fidelity
 for a given number of time points using an exponential function,
 where with the par.slope stretching and compression of the function can be influenced.
 Here the exponential function is derived as the reflection of the logarithm function on the straight line

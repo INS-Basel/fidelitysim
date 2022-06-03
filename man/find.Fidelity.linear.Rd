@@ -2,7 +2,7 @@
 % Please edit documentation in R/patterns.R
 \name{find.Fidelity.linear}
 \alias{find.Fidelity.linear}
-\title{Title}
+\title{Find approximate fidelity with a linear function}
 \usage{
 find.Fidelity.linear(time.points, Fid.End, Fid.T1)
 }

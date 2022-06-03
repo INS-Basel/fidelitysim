@@ -2,7 +2,7 @@
 % Please edit documentation in R/patterns.R
 \name{find.Fidelity.log}
 \alias{find.Fidelity.log}
-\title{Title}
+\title{Find approximate fidelity with a logarithmic function}
 \usage{
 find.Fidelity.log(time.points, Fid.End, Fid.T1, par.slope = 1)
 }

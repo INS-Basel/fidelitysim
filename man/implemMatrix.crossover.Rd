@@ -2,10 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{implemMatrix.crossover}
 \alias{implemMatrix.crossover}
-\title{Title
-Given a design of a hypothetical cluster randomized stepped wedge study and their pattern of fidelity over time
-conduct the function the corresponding design matrix
-which can be used for linear regression modeling}
+\title{Implementation of crossover matrix}
 \usage{
 implemMatrix.crossover(nC, nT, nSw, swP = NULL, pattern)
 }
@@ -25,7 +22,6 @@ Design matrix of size nT x nC for a cross-over cluster randomized trial with
 values of 0 for control condition and values between 0 and 1 for degree of implementation of treatment (fidelity)' @return
 }
 \description{
-Title
 Given a design of a hypothetical cluster randomized stepped wedge study and their pattern of fidelity over time
 conduct the function the corresponding design matrix
 which can be used for linear regression modeling

@@ -2,8 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{performanceMeas}
 \alias{performanceMeas}
-\title{Title
-Calculation of several performance measure for the estimates obtained from the simulation repeats}
+\title{??? - Please fill in a title}
 \usage{
 performanceMeas(vecEst, vecSe, vec.p, theta, alpha = 0.05)
 }
@@ -29,6 +28,6 @@ Vector of Performance measures:
 }
 }
 \description{
-Title
-Calculation of several performance measure for the estimates obtained from the simulation repeats
+Calculation of several performance measure for the estimates
+obtained from the simulation repeats
 }
