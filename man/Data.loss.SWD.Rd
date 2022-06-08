@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{Data.loss.SWD}
 \alias{Data.loss.SWD}
-\title{Data loss simulation}
+\title{Data loss simulation for given study data}
 \usage{
 Data.loss.SWD(data.all, I, K, B = "0", C = 0, D = 0)
 }

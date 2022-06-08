@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{performanceMeas}
 \alias{performanceMeas}
-\title{??? - Please fill in a title}
+\title{Get several performance measures of (effect estimation) simulation studies}
 \usage{
 performanceMeas(vecEst, vecSe, vec.p, theta, alpha = 0.05)
 }
