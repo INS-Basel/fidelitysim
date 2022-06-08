@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/INS-Basel/fidelitysim/workflows/R-CMD-check/badge.svg)](https://github.com/INS-Basel/fidelitysim/actions)
+[![R-CMD-check](https://github.com/INS-Basel/fidelitysim/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/INS-Basel/fidelitysim/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 {fidelitysim} holds code to replicate the simulation of different
