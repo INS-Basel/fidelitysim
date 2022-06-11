@@ -14,7 +14,7 @@ which can be used for linear regression modeling"><!-- mathjax --><script src="h
     
     <a class="navbar-brand me-2" href="../index.html">fidelitysim</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9002</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,18 +61,29 @@ which can be used for linear regression modeling</p>
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>nC</dt>
 <dd><p>Number of cluster</p></dd>
+
+
 <dt>nT</dt>
 <dd><p>Number of time points</p></dd>
+
+
 <dt>nSw</dt>
 <dd><p>Number of cluster with switches from control condition 0 to treatment condition 1 at each time point</p></dd>
+
+
 <dt>swP</dt>
 <dd><p>Number of timepoints the for clusters be at control</p></dd>
+
+
 <dt>pattern</dt>
 <dd><p>Fidelity pattern (deviation from 1)  for each time point</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>Design matrix of size nT x nC for a cross-over cluster randomized trial with
+    
+
+<p>Design matrix of size nT x nC for a cross-over cluster randomized trial with
 values of 0 for control condition and values between 0 and 1 for degree of implementation of treatment (fidelity)' @return</p>
     </div>
 
@@ -85,7 +96,7 @@ values of 0 for control condition and values between 0 and 1 for degree of imple
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
 </div>
 
     </footer></div>

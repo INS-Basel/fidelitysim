@@ -1,8 +1,8 @@
 pandoc: 2.7.3
-pkgdown: 2.0.3
+pkgdown: 2.0.4
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-06-08T15:11Z
+last_built: 2022-06-11T10:02Z
 urls:
   reference: https://ins-basel.github.io/fidelitysim/reference
   article: https://ins-basel.github.io/fidelitysim/articles
