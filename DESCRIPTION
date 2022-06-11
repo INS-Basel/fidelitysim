@@ -1,14 +1,13 @@
 Package: fidelitysim
-Title: Simulations experiments for cluster randomized trials having fidelity patterns for implementation science research
-Version: 0.0.0.9002
+Title: Fidelity patterns in simulation experiments for cluster randomized trials in implementation science research
+Version: 0.0.1
 Authors@R: c(
     person("Diana", "Trutschel", , "diana@trutschel.de", role = c("aut"),
             comment =c(ORCID = "")),
     person("Catherine", "Blatter", , "catherine.blatter@unibas.ch", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-4069-7178")))
-Description: For several possible existing fidelity patterns the values of 
-  fidelity over time is calculated. These fidelity patterns can be used to 
-  simulate data witin different hypothetical cluster randomized trials. 
+Description: Calculate values of fidelity for different fidelity patterns with 
+  simulated data witin different hypothetical cluster randomized trials. 
   The package provides a function to coduct a whole simulation experiment to 
   investigate the performance of effect estimation within cluster randomized 
   trials with existing implementation error (measured by fidelity).
