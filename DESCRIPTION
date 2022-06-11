@@ -4,7 +4,7 @@ Version: 0.0.1
 Authors@R: c(
     person("Diana", "Trutschel", , "diana@trutschel.de", role = c("aut"),
             comment =c(ORCID = "")),
-    person("Catherine", "Blatter", , "catherine.blatter@unibas.ch", role = c("aut", "cre"),
+    person("Catherine", "Blatter", , "catherine.blatter@unibas.ch", role = c("ctb", "cre"),
            comment = c(ORCID = "0000-0002-4069-7178")))
 Description: Calculate values of fidelity for different fidelity patterns with 
   simulated data witin different hypothetical cluster randomized trials. 
