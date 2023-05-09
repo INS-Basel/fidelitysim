@@ -5,7 +5,9 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/INS-Basel/fidelitysim/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/INS-Basel/fidelitysim/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/INS-Basel/fidelitysim/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/INS-Basel/fidelitysim/actions/workflows/R-CMD-check.yaml) 
+
+[![DOI](https://zenodo.org/badge/497928840.svg)](https://zenodo.org/badge/latestdoi/497928840)
 <!-- badges: end -->
 
 {fidelitysim} holds code to replicate the simulation of different
