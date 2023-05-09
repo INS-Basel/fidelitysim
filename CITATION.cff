@@ -1,0 +1,65 @@
+# -----------------------------------------------------------
+# CITATION file created with {cffr} R package, v0.5.0
+# See also: https://docs.ropensci.org/cffr/
+# -----------------------------------------------------------
+ 
+cff-version: 1.2.0
+message: 'To cite package "fidelitysim" in publications use:'
+type: software
+license: CC-BY-4.0
+title: 'fidelitysim: Fidelity patterns in simulation experiments for cluster randomized
+  trials in implementation science research'
+version: '0.1'
+abstract: The package provides functions to coduct simulation experiments for investigating
+  the performance of effect estimation within parallel/stepped-wedged cluster randomized
+  trials under consideration of implementation error (measured by fidelity).
+authors:
+- family-names: Trutschel
+  given-names: Diana
+  email: diana@trutschel.de
+- family-names: Blatter
+  given-names: Catherine
+  email: catherine.blatter@unibas.ch
+  orcid: https://orcid.org/0000-0002-4069-7178
+repository-code: https://github.com/INS-Basel/fidelitysim
+url: https://ins-basel.github.io/fidelitysim/
+date-released: '2023-05-09'
+contact:
+- family-names: Blatter
+  given-names: Catherine
+  email: catherine.blatter@unibas.ch
+  orcid: https://orcid.org/0000-0002-4069-7178
+references:
+- type: software
+  title: lme4
+  abstract: 'lme4: Linear Mixed-Effects Models using ''Eigen'' and S4'
+  notes: Imports
+  url: https://github.com/lme4/lme4/
+  repository: https://CRAN.R-project.org/package=lme4
+  authors:
+  - family-names: Bates
+    given-names: Douglas
+    orcid: https://orcid.org/0000-0001-8316-9503
+  - family-names: Maechler
+    given-names: Martin
+    orcid: https://orcid.org/0000-0002-8685-9910
+  - family-names: Bolker
+    given-names: Ben
+    email: bbolker+lme4@gmail.com
+    orcid: https://orcid.org/0000-0002-2127-0443
+  - family-names: Walker
+    given-names: Steven
+    orcid: https://orcid.org/0000-0002-4394-9078
+  year: '2023'
+- type: software
+  title: samplingDataCRT
+  abstract: 'samplingDataCRT: Sampling Data Within Different Study Designs for Cluster
+    Randomized Trials'
+  notes: Imports
+  repository: https://CRAN.R-project.org/package=samplingDataCRT
+  authors:
+  - family-names: Trutschel
+    given-names: Diana
+  - family-names: Treutler
+    given-names: Hendrik
+  year: '2023'
