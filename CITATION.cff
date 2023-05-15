@@ -2,14 +2,14 @@
 # CITATION file created with {cffr} R package, v0.5.0
 # See also: https://docs.ropensci.org/cffr/
 # -----------------------------------------------------------
- 
+
 cff-version: 1.2.0
 message: 'To cite package "fidelitysim" in publications use:'
 type: software
 license: CC-BY-4.0
 title: 'fidelitysim: Fidelity patterns in simulation experiments for cluster randomized
   trials in implementation science research'
-version: '0.1'
+version: '0.1.1'
 abstract: The package provides functions to coduct simulation experiments for investigating
   the performance of effect estimation within parallel/stepped-wedged cluster randomized
   trials under consideration of implementation error (measured by fidelity).

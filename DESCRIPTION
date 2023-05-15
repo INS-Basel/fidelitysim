@@ -1,9 +1,9 @@
 Package: fidelitysim
 Title: Fidelity patterns in simulation experiments for cluster randomized trials in implementation science research
-Version: 0.1
+Version: 0.1.1
 Authors@R: c(
     person("Diana", "Trutschel", , "diana@trutschel.de", role = c("aut"),
-            comment =c(ORCID = "")),
+            comment =c(ORCID = "0000-0002-1727-9736")),
     person("Catherine", "Blatter", , "catherine.blatter@unibas.ch", role = c("ctb", "cre"),
            comment = c(ORCID = "0000-0002-4069-7178")))
 Description: The package provides functions to coduct simulation experiments for 
@@ -14,7 +14,7 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.0
 URL: https://github.com/INS-Basel/fidelitysim,
-    https://ins-basel.github.io/fidelitysim/
+    https://ins-basel.github.io/fidelitysim
 BugReports: https://github.com/INS-Basel/fidelitysim/issues
 Imports: 
     lme4,

@@ -5,15 +5,22 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/INS-Basel/fidelitysim/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/INS-Basel/fidelitysim/actions/workflows/R-CMD-check.yaml) 
-
+[![R-CMD-check](https://github.com/INS-Basel/fidelitysim/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/INS-Basel/fidelitysim/actions/workflows/R-CMD-check.yaml)
 [![DOI](https://zenodo.org/badge/497928840.svg)](https://zenodo.org/badge/latestdoi/497928840)
 <!-- badges: end -->
 
 {fidelitysim} holds code to replicate the simulation of different
-fidelity patterns as reported in \[ - paper - \].
+fidelity patterns as reported in:
 
-## Installation
+**The unrecognized role of fidelity in effectiveness-implementation
+hybrid trials: simulation study and guidance for implementation
+researchers**. Trutschel et al. *BMC Medical Research Methodology*
+(2023) 23:116. <https://doi.org/10.1186/s12874-023-01943-3>
+
+A guided tutorial on how to apply the simulation is given here
+<https://ins-basel.github.io/fidelity-tutorial>
+
+## Installation of the R-package
 
 You can install {fidelitysim} from GitHub:
 
@@ -23,8 +30,3 @@ install.packages("remotes")
 
 remotes::install_github("INS-Basel/fidelitysim")
 ```
-
-## Usage
-
-A guided tutorial on how to apply the simulation is given here
-<https://ins-basel.github.io/fidelity-tutorial>
